@@ -5,19 +5,19 @@ class Job
   def initialize(arg = {})
 
     @title = arg.fetch(:title, "")
-    @id = arg.fetch(:id, "")
-    @salary = arg.fetch(:salary, "")
+    # @id = arg.fetch(:id, "")
+    @salary = arg.fetch(:min_salary, "")
     @location = arg.fetch(:location, "")
     @description = arg.fetch(:description, "")
-    @positions_available = arg.fetch(:positions_available, "")
-    @preferred_skills = arg.fetch(:preferred_skills)
+    # @positions_available = arg.fetch(:positions_available, "")
+    # @preferred_skills = arg.fetch(:preferred_skills)
 
   end
 
 
-  def to_s
+  def to_s(args={})
     puts "==========================================="
-    puts "id: #{id} - title: #{title}"
+    puts "id: #{@id} - title: #{@title}"
     puts "salary: #{salary}"
     puts "location: #{location}"
     puts "description: #{description}"
